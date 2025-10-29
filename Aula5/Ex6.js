@@ -9,7 +9,7 @@
 //puxar prompt
 const prompt = require('prompt-sync')();
 
-//NOME DO USUÁRIO
+//NOME DO USUÁRIO VALIDANDO SE TEM MAIS QUE 3 CARACTERES
 let nomeUsuario = prompt("Digite seu nome de usuário: ");
 while (nomeUsuario.trim().length <3) { //while é loop de repetição e trim é para limpar o que foi preenchido errado. (limpa se o numero de caracteres for menor que 3)
     console.log("Precisa incluir 3 ou mais caracteres no nome de usuário.");
@@ -19,8 +19,8 @@ while (nomeUsuario.trim().length <3) { //while é loop de repetição e trim é 
 let email = prompt("Digite seu e-mail: ");
 //CALCULANDO A IDADE, COM O ANO DE NASCIMENTO
 let anoNasc = parseFloat(prompt("Em qual ano você nasceu? "));
-const dataAtual = new Date(); // data atual
-const anoAtual = dataAtual.getFullYear(); // pegar somente o ano
+let dataAtual = new Date(); // data atual
+let anoAtual = dataAtual.getFullYear(); // pegar somente o ano
 let idadeUsuario = anoAtual - anoNasc;
 let anosFalta = 18 - idadeUsuario;
 // VALIDAÇÃO DA IDADE
@@ -31,4 +31,3 @@ if(idadeUsuario >= 18){
 }
 // OBSERVAÇÃO
 console.log(`*Obs.: O usuário ${nomeUsuario} tem ${idadeUsuario} anos.`);
-//
