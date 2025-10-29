@@ -21,7 +21,9 @@ let email = prompt("Digite seu e-mail: ");
 let anoNasc = parseFloat(prompt("Em qual ano você nasceu? "));
 let dataAtual = new Date(); // data atual
 let anoAtual = dataAtual.getFullYear(); // pegar somente o ano
+//DESCOBRINDO A IDADE DO USUÁRIO
 let idadeUsuario = anoAtual - anoNasc;
+//VERIFICANDO QUANTOS ANOS FALTA PARA ELE TER 18 ANOS (SE ELE FOR MENOR)
 let anosFalta = 18 - idadeUsuario;
 // VALIDAÇÃO DA IDADE
 if(idadeUsuario >= 18){
