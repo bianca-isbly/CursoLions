@@ -13,7 +13,7 @@ let notas = [];
 //pergunta: da pra fazer q a entrada do usuario seja somente numeros diretamente, sem usar 'parseFloat'? sim -- L18
 //e usar a mesma variavel ex. "let bio" que é a mesma pergunta, para todos as entradas de nome de alunos?
 
- nomeAluno = prompt("Nome do Aluno(a): ");
+nomeAluno = prompt("Nome do Aluno(a): ");
 let ptBr = prompt("Digite a nota da prova de português: ");
 //let ptBr = parseFloat(prompt("Digite a nota da prova de português: "));
 let mat = prompt("Digite a nota da prova de matemática: ");
