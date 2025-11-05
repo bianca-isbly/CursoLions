@@ -2,7 +2,7 @@
 
 //const aluno1 = prompt("digite  o nome do aluno 1")
 
-//const aluno2 
+//const aluno2
 
 //const prompt = require('prompt-sync') ();
 
@@ -22,7 +22,7 @@
 //Operações matemáticas
 
 //Adição:
-//let soma1 = 10 + 5; 
+//let soma1 = 10 + 5;
 //let soma2 = 50 + 5;
 //console.log(soma1 + soma2);
 
@@ -52,7 +52,7 @@
 //Teste: Média de notas dos alunos//
 
 //Puxar arquivos para o usuário preencher
-const prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")();
 
 //Alunos e notas (usuário preenche)
 const aluno1 = prompt("Nome do Aluno: ");
@@ -62,8 +62,8 @@ let notaFisA1 = prompt("Nota Física: ");
 
 const aluno2 = prompt("Nome do Aluno: ");
 let notaMatA2 = prompt("Nota Matemática: ");
-let notaBioA2= prompt("Nota Biologia: ");
-let notaFisA2= prompt("Nota Física: ");
+let notaBioA2 = prompt("Nota Biologia: ");
+let notaFisA2 = prompt("Nota Física: ");
 
 const aluno3 = prompt("Nome do Aluno: ");
 let notaMatA3 = prompt("Nota Matemática: ");
@@ -90,18 +90,16 @@ console.log(`Olá ${nome}`);
 //uso de if e else
 let idadeUsuario = prompt("Quantos anos você tem? ");
 
-if(idadeUsuario >= 18){
-    console.log("usuario é MAIOR de 18");
-} 
-else{
-    console.log("usuario é MENOR de 18");
+if (idadeUsuario >= 18) {
+  console.log("usuario é MAIOR de 18");
+} else {
+  console.log("usuario é MENOR de 18");
 }
 
 const idade = 20;
 
-if(idade >= 18){
-    console.log("usuario é MAIOR de 18 anos.");
-} 
-else{
-    console.log("usuario é MENOR de 18 anos.");
+if (idade >= 18) {
+  console.log("usuario é MAIOR de 18 anos.");
+} else {
+  console.log("usuario é MENOR de 18 anos.");
 }

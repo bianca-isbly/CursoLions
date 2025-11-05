@@ -11,13 +11,11 @@
 let estoque = [12, 0, 5, 8, 0, 3];
 
 for (let posicao = 0; posicao < estoque.length; posicao++) {
-
-    if (estoque[posicao]) {
-        console.log(`O produto ${posicao} está disponível.`);
-    } else {
-        console.log(`O produto ${posicao} está em falta.`)
-    }
-
+  if (estoque[posicao]) {
+    console.log(`O produto ${posicao} está disponível.`);
+  } else {
+    console.log(`O produto ${posicao} está em falta.`);
+  }
 }
 
 //2. Soma de Números Pares
@@ -30,15 +28,13 @@ let soma1 = 0;
 let resto;
 
 for (let i = 0; i < num.length; i = i + 1) {
-    
-    if (num[i] % 2 == 0) {
-        soma1 = soma1 + num[i];
-        console.log(`A soma dos números pares é ${soma1}`);
-    } else{
-        resto = num[i];
-        console.log(`O número ${resto} é ímpar, não é possível somá-lo.`);
-    }
-    
+  if (num[i] % 2 == 0) {
+    soma1 = soma1 + num[i];
+    console.log(`A soma dos números pares é ${soma1}`);
+  } else {
+    resto = num[i];
+    console.log(`O número ${resto} é ímpar, não é possível somá-lo.`);
+  }
 }
 // para printar os últimos dois resultados e deixar a lógica (for) "escondida".
 //console.log(`A soma dos números pares é ${soma}`);
@@ -52,7 +48,7 @@ for (let i = 0; i < num.length; i = i + 1) {
 // - “Reprovado” caso contrário.
 // Dica: some todas as notas com o for, depois divida pelo tamanho do array.
 
-const prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")();
 
 let nomeAluno = prompt("Nome do aluno(a): ");
 
@@ -61,16 +57,20 @@ let soma = 0;
 let media = 0;
 
 for (let i = 0; i < notasAluno.length; i++) {
-        soma = soma + notasAluno[i];  // soma = 0 + cada nota do aluno [posicao0, posicao1, posicao2, posicao3, posicao4, posicao5]
+  soma = soma + notasAluno[i]; // soma = 0 + cada nota do aluno [posicao0, posicao1, posicao2, posicao3, posicao4, posicao5]
 }
 
 media = soma / notasAluno.length; // resultado da soma, dividido pelo número de notas dentro do array notasAluno.
 console.log(`A média do aluno(a) ${nomeAluno} é de ${media}`);
 
 if (media >= 6) {
-    console.log(`O aluno(a) ${nomeAluno} foi aprovado, com média de ${media}, sendo superior a 6.`);
+  console.log(
+    `O aluno(a) ${nomeAluno} foi aprovado, com média de ${media}, sendo superior a 6.`
+  );
 } else {
-    console.log(`O aluno(a) ${nomeAluno} foi reprovado, com média de ${media}, sendo inferior a 6.`);
+  console.log(
+    `O aluno(a) ${nomeAluno} foi reprovado, com média de ${media}, sendo inferior a 6.`
+  );
 }
 
 // 4. Contador de Palavras Curta/Longa
@@ -85,13 +85,13 @@ let palavras = ["sol", "computador", "lua", "montanha", "céu"];
 // palavras.push(prompt("Digite a palavra: "));
 
 for (let i = 0; i < palavras.length; i++) {
-    let numLetras = 0 + palavras[i].length;
+  let numLetras = 0 + palavras[i].length;
 
-    if (numLetras < 5) {
-        console.log(`A palavra ${palavras[i]} é MENOR que 5 letras`);
-    } else {
-        console.log(`A palavra ${palavras[i]} é MAIOR que 5 letras`);
-    }
+  if (numLetras < 5) {
+    console.log(`A palavra ${palavras[i]} é MENOR que 5 letras`);
+  } else {
+    console.log(`A palavra ${palavras[i]} é MAIOR que 5 letras`);
+  }
 }
 
 // 5. Multiplicação de Elementos
@@ -104,10 +104,10 @@ let resultado = [];
 let novoArray = [];
 
 for (let i = 0; i < numeros.length; i++) {
-    resultado = numeros[i] * 3;
-    //console.log(resultado);
-    novoArray.push(resultado);
-    console.log(`O resultado do número ${numeros[i]}x3 é = ${novoArray[i]}.`);
+  resultado = numeros[i] * 3;
+  //console.log(resultado);
+  novoArray.push(resultado);
+  console.log(`O resultado do número ${numeros[i]}x3 é = ${novoArray[i]}.`);
 }
 
 // 6. Busca de Nome
@@ -116,21 +116,20 @@ for (let i = 0; i < numeros.length; i++) {
 // Exiba “Convidado confirmado” ou “Não está na lista”.
 // Dica: compare com if (nomes[i] === nomeProcurado).
 
-let convidados = ['Isabela', 'Carlos', 'Gabriel', 'Patrícia', 'Laura']; // 5
+let convidados = ["Isabela", "Carlos", "Gabriel", "Patrícia", "Laura"]; // 5
 let nomeProcurado;
 let convidadeConfirmado = false;
 
 for (let i = 0; i < convidados.length; i++) {
-    
-    if (convidados[i] == "Gabriel") {
-        convidadeConfirmado = true;
-        console.log('Convidado confirmado!');
-        break;
-    }
+  if (convidados[i] == "Gabriel") {
+    convidadeConfirmado = true;
+    console.log("Convidado confirmado!");
+    break;
+  }
 }
 
-if (convidadeConfirmado == false){
-    console.log('Não está na lista!');
+if (convidadeConfirmado == false) {
+  console.log("Não está na lista!");
 }
 
 // 7. Temperaturas da Semana
@@ -144,11 +143,10 @@ let verificar = [];
 let dias = 0;
 
 for (let i = 0; i < temperaturas.length; i++) {
-
-    if (temperaturas[i] > 25) { 
-        verificar.push(temperaturas[i]);
-        dias = dias + 1;
-    }
+  if (temperaturas[i] > 25) {
+    verificar.push(temperaturas[i]);
+    dias = dias + 1;
+  }
 }
 
 console.log(`Dias com temperaturas acima de 25º: ${dias}`);
@@ -167,12 +165,11 @@ let alunos = ["Ana", "Bruno", "Carlos", "Diana"];
 let notas = [8, 4, 6, 9];
 
 for (let i = 0; i < alunos.length; i++) {
-
-    if(notas[i] >= 6) {
-        console.log(`O ALUNO(A) ${alunos[i]} ESTÁ APROVADO(A)!!`);
-    } else {
-        console.log(`O ALUNO(A) ${alunos[i]} ESTÁ REPROVADO(A)!!`);
-    }
+  if (notas[i] >= 6) {
+    console.log(`O ALUNO(A) ${alunos[i]} ESTÁ APROVADO(A)!!`);
+  } else {
+    console.log(`O ALUNO(A) ${alunos[i]} ESTÁ REPROVADO(A)!!`);
+  }
 }
 
 // 9. Tabela de Multiplicação
@@ -183,7 +180,7 @@ let tabuada7 = 7;
 let i;
 
 for (i = 0; i <= 10; i++) {
-    console.log(`O resultado de ${tabuada7}x${[i]} é = ${i*tabuada7}.`);
+  console.log(`O resultado de ${tabuada7}x${[i]} é = ${i * tabuada7}.`);
 }
 
 // 10. Ajuste de Preços
@@ -195,6 +192,10 @@ for (i = 0; i <= 10; i++) {
 let precos = [10, 20, 35, 50, 5];
 
 for (let i = 0; i < precos.length; i++) {
-    let aumento10 = precos[i] * 1.1;
-    console.log(`O valor ${precos[i]}, teve um aumento de 10%, totalizando: ${aumento10.toFixed(2)}`);
+  let aumento10 = precos[i] * 1.1;
+  console.log(
+    `O valor ${
+      precos[i]
+    }, teve um aumento de 10%, totalizando: ${aumento10.toFixed(2)}`
+  );
 }
