@@ -8,28 +8,29 @@ console.log(nAleatorio);
 console.log("Bem-vindo ao jogo de adivinhação!");
 let nomeUsuario = prompt("Qual seu nome? ");
 
-function pergunta(){
-    
-    nUsuario = parseInt(prompt(`${nomeUsuario}, escolha um número entre 0 e 5 `));
-    
-    if (nUsuario > 5) {
-      console.log("Número inválido, tente novamente!");
-      while (nUsuario > 5) {
-        nUsuario = parseInt(
-          prompt(`${nomeUsuario}, escolha um número entre 0 e 5 `)
-        );
-      }
+nUsuario = parseInt(prompt(`${nomeUsuario}, escolha um número entre 0 e 5 `));
+
+if (nUsuario > 5) {
+  console.log("Número inválido");
+  perguntarAoUser();
+}
+
+function perguntarAoUser() {
+  while (nUsuario != nAleatorio) {
+    nUsuario = parseInt(
+      prompt(`Tente novamente! Escolha um número entre 0 e 5 `)
+    );
+
+    if (nUsuario <= 5) {
+      console.log("vc perdeu");
+      nUsuario = parseInt(
+        prompt(`Tente novamente! Escolha um número entre 0 e 5 `)
+      );
     }
-    
     if (nUsuario == nAleatorio) {
       console.log("Vc ganhou!");
       return;
     }
-    
-    if (nUsuario != nAleatorio) {
-    
-      console.log("Vc perdeu");
-    
-    }
-};
-return
+  }
+}
+

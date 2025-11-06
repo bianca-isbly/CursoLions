@@ -25,56 +25,59 @@ escolhaComputador = Math.floor(Math.random() * opcoes.length);
 console.log(
   "Bem-vindo ao jogo de pedra, papel e tesoura \n Para selecionar, use os números: \n Pedra (0), Papel (1) e Tesoura (2) \n"
 ); // \n é para quebrar a linha no console
+console.log(escolhaComputador);
+
 let nomeUsuario = prompt("Qual seu nome? ");
-escolhaUsuario = parseInt(prompt("Escolha entre 0, 1 e 2")); // parseInt é para transformar a escolha do usuário em número inteiro, igual parseFloat.
+escolhaUsuario = parseInt(prompt("Escolha entre 1, 2 e 3")); // parseInt é para transformar a escolha do usuário em número inteiro, igual parseFloat.
+const escolhaComecandoDeUm = escolhaUsuario - 1;
 
 // como arrumar pra aparecer as palavras de opções? L34
 // como mudar a escolha do usuário para 1,2,3 no console em vez de 0,1,2?
 
 //condição de empate
-if (escolhaUsuario == escolhaComputador) {
+if (escolhaComecandoDeUm == escolhaComputador) {
   console.log(
     `${nomeUsuario} escolheu ${escolhaComputador} e PC escolheu ${escolhaComputador}`
   );
-  console.log("Empate!");
+  console.log("Empate!  " + opcoes[escolhaComputador]);
 }
 //condição de escolha do usuário ser pedra
-if (escolhaUsuario == 0 && escolhaComputador == 2) {
+if (escolhaComecandoDeUm == 0 && escolhaComputador == 2) {
   console.log(
     `${nomeUsuario} escolheu ${opcoes[0]} e PC escolheu ${opcoes[2]} = ${opcoes[0]} ganha de ${opcoes[2]}.`
   );
   console.log(`${nomeUsuario} ganhou!`);
 }
 
-if (escolhaUsuario == 0 && escolhaComputador == 1) {
+if (escolhaComecandoDeUm == 0 && escolhaComputador == 1) {
   console.log(
     `PC escolheu ${opcoes[1]} e ${nomeUsuario} escolheu ${opcoes[0]} = ${opcoes[1]} ganha de ${opcoes[0]}.`
   );
   console.log(`${nomeUsuario} perdeu!`);
 }
 //condição de escolha do usuário ser papel
-if (escolhaUsuario == 1 && escolhaComputador == 0) {
+if (escolhaComecandoDeUm == 1 && escolhaComputador == 0) {
   console.log(
     `${nomeUsuario} escolheu ${opcoes[1]} e PC escolheu ${opcoes[0]} = ${opcoes[1]} ganha de ${opcoes[0]}.`
   );
   console.log(`${nomeUsuario} ganhou!`);
 }
 
-if (escolhaUsuario == 1 && escolhaComputador == 2) {
+if (escolhaComecandoDeUm == 1 && escolhaComputador == 2) {
   console.log(
     `PC escolheu ${opcoes[2]} e ${nomeUsuario} escolheu ${opcoes[1]} = ${opcoes[2]} ganha de ${opcoes[1]}.`
   );
   console.log(`${nomeUsuario} perdeu!`);
 }
 //condição de escolha do usuário ser tesoura
-if (escolhaUsuario == 2 && escolhaComputador == 1) {
+if (escolhaComecandoDeUm == 2 && escolhaComputador == 1) {
   console.log(
     `${nomeUsuario} escolheu ${opcoes[2]} e PC escolheu ${opcoes[1]} = ${opcoes[2]} ganha de ${opcoes[1]}.`
   );
   console.log(`${nomeUsuario} ganhou!`);
 }
 
-if (escolhaUsuario == 2 && escolhaComputador == 0) {
+if (escolhaComecandoDeUm == 2 && escolhaComputador == 0) {
   console.log(
     `PC escolheu ${opcoes[0]} e ${nomeUsuario} escolheu ${opcoes[2]} = ${opcoes[0]} ganha de ${opcoes[2]}.`
   );
