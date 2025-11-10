@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")();
+
 let nAleatorio;
 let nUsuario;
 
