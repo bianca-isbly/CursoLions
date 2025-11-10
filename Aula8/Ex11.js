@@ -39,7 +39,7 @@ if (escolhaComecandoDeUm == escolhaComputador) {
   console.log(
     `${nomeUsuario} escolheu ${escolhaComputador} e PC escolheu ${escolhaComputador}`
   );
-  //console.log("Empate!  " + opcoes[escolhaComputador]); // 2 consoles log, dando conflito
+  //console.log("Empate!  " + opcoes[escolhaComputador]); // 2 console log, dando conflito
 }
 //condição de escolha do usuário ser pedra
 if (escolhaComecandoDeUm == 0 && escolhaComputador == 2) {
