@@ -9,13 +9,43 @@
 // 5. Conte e exiba quantas notas são consideradas reprovadas (abaixo de
 // 8.0).
 
-let notas = [5, 6, 8, 10, 10, 9, 7, 8, 10, 6];
+let notas = [5, 8.5, 6, 7, 4, 9.5, 10, 6.7, 9.5, 8.9];
 let soma = 0;
 let media = 0;
+let notaAlta = 0;
+let notaBaixa = 11;
+let acimaMedia = [];
 
 for (let i = 0; i < notas.length; i++) {
-    soma = soma + notas[i];
-    media = soma / notas.length;
+  soma = soma + notas[i];
+  media = soma / notas.length;
 }
 
-console.log(`A média da turma é ${media}.`);
+for (let i = 0; i < notas.length; i++) {
+  const numeroAtual = notas[i];
+  if (numeroAtual > notaAlta) {
+    notaAlta = numeroAtual;
+  }
+}
+
+for (let i = 0; i < notas.length; i++) {
+  const numeroAtual = notas[i];
+  if (numeroAtual < notaBaixa) {
+    notaBaixa = numeroAtual;
+  }
+}
+
+// console.log(`A média da turma é ${media.toFixed(1)}`);
+// console.log(`A nota mais alta é ${notaAlta}`);
+// console.log(`A nota mais baixa é ${notaBaixa}`);
+
+for (let i = 0; i < notas.length; i++) {
+    
+    if (notas[i] >= media) {
+        acimaMedia.push(notas[i]);
+    }
+  }
+
+console.log(`A média da turma é ${media.toFixed(1)}\nA nota mais alta é ${notaAlta}\nA nota mais baixa é ${notaBaixa}\nO total de notas acima da média são: ${acimaMedia.length}\nSendo elas: ${acimaMedia.join(', ')}`);
+// O .join() é um método de array em JavaScript usado para transformar todos os elementos de um array em uma única string.
+// por padrão " .join() " --> usa , para separar. espaço dps da vírgula como no ex, ajuda a separar os valores. --> para separar os parâmetros.
