@@ -13,6 +13,9 @@
 // // 6. Finalmente, mostrar usando console.log() a escolha do computador, do usuário e o
 // // resultado.
 
+
+// TEM ALGUM ERRO NESSE EXERCÍCIO*****
+
 const prompt = require("prompt-sync")();
 let escolhaComputador;
 let escolhaUsuario;
@@ -39,7 +42,7 @@ if (escolhaComecandoDeUm == escolhaComputador) {
   console.log(
     `${nomeUsuario} escolheu ${escolhaComputador} e PC escolheu ${escolhaComputador}`
   );
-  //console.log("Empate!  " + opcoes[escolhaComputador]); // 2 console log, dando conflito
+  console.log("Empate!  "); // 2 console log, dando conflito
 }
 //condição de escolha do usuário ser pedra
 if (escolhaComecandoDeUm == 0 && escolhaComputador == 2) {
