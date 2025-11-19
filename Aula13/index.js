@@ -2,10 +2,11 @@ const prompt = require("prompt-sync")();
 const atualizar = require("./atualizar");
 const cadastro = require("./cadastro");
 const listar = require("./listar");
+const remover = require("./remover");
 const usuarios = require("./usuarios");
-Menu()
-function Menu (){;
-let escolhaMenu;
+Menu();
+function Menu() {
+  let escolhaMenu;
 
   console.log(`
 1 - Cadastrar usuário
@@ -26,11 +27,12 @@ let escolhaMenu;
       atualizar(), Menu();
       break;
     case 4:
-      remover(), Menu();
-      break;
+      remover(usuarios), Menu();
+    break;
     case 5:
       process.exit();
     default:
+      console.log("Comando inválido!\nTente novamente."), Menu();
       break;
   }
 }

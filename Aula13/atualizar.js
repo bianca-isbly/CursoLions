@@ -5,7 +5,6 @@ let usuarios = require("./usuarios");
 
 function atualizar() {
   listar(usuarios);
-
   let escolha = parseInt(prompt("Escolha um usuário pelo ID para atualizar: "));
   let busca = usuarios.forEach(usuarioEscolhido => {
     if (escolha == usuarioEscolhido.id) {
@@ -16,6 +15,8 @@ function atualizar() {
         usuarioEscolhido.nome = novoNome;
         usuarioEscolhido.idade = novaIdade;
         usuarioEscolhido.telefone = novoTelefone;
+    } else {
+      console.log(`ERRO: Usuário com o ID ${escolha} não foi encontrado.`);
     }
   });
   console.log(`Dados do usuário atualizado com sucesso!`);
