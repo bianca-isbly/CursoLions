@@ -28,7 +28,7 @@ function Menu() {
       break;
     case 4:
       remover(usuarios), Menu();
-    break;
+      break;
     case 5:
       process.exit();
     default:
