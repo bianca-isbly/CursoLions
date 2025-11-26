@@ -16,6 +16,7 @@ function cadastro() {
       condicao = false;
     }
   }
+
   let nome = prompt("Nome do usuário: ");
   let idade = parseInt(prompt("Idade: "));
   let telefone = parseInt(prompt("Telefone: "));

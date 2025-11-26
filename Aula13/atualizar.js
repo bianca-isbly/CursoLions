@@ -17,10 +17,11 @@ function atualizar() {
       usuarioEscolhido.idade = novaIdade;
       usuarioEscolhido.telefone = novoTelefone;
       usuarioEscolhido.email = novoEmail;
+      console.log(`Dados do usuário atualizado com sucesso!`);
+    } else {
       console.log(`ERRO: Usuário com o ID ${escolha} não foi encontrado.`);
     }
   });
-  console.log(`Dados do usuário atualizado com sucesso!`);
 }
 
 module.exports = atualizar;
