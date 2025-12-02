@@ -16,7 +16,7 @@ function listar(usuarios) {
           "\nTelefone: " +
           usuario.telefone +
           "\nE-mail: " +
-          usuario.email1'
+          usuario.email
       );
     });
   } else {
