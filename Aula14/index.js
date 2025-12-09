@@ -47,3 +47,15 @@ ________________________________________________________________________________
 
 module.exports = Menu;
 Menu();
+
+const express = require("express")
+const router = express()
+const port = 3000
+
+router.put("/baralho/:id", (req, res) => {
+  atualizarBaralho(req.params.id, req.body)
+})
+
+router.listen(port, ()=>{
+  console.log()
+})

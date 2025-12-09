@@ -2,11 +2,11 @@ const prompt = require("../Aula13/prompt");
 const { baralhos } = require("./data");
 const listarBaralho = require("./listarBaralhos");
 
-function atualizarBaralho() {
+function atualizarBaralho(id, novoBaralho) {
   listarBaralho(baralhos);
-  let escolha = parseInt(prompt("Escolha um baralho pelo ID para atualizar: "));
+  //let escolha = parseInt(prompt("Escolha um baralho pelo ID para atualizar: "));
   baralhos.forEach((baralhoEscolhido) => {
-    if (escolha == baralhoEscolhido.id) {
+    if (id == baralhoEscolhido.id) {
       console.log(`Atualizando o baralho: `);
       let novoNome = prompt("Novo nome do baralho: ");
       baralhoEscolhido.nome = novoNome;
