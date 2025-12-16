@@ -51,6 +51,8 @@ app.put("/atualizarBaralho/:id", (req, res) => {
 
 // OPÇÃO 4: Remoção do Baralho (DELETE)
 
+//  node --watch index.js --> para rodar o terminal automaticamente.
+
 app.listen(3000, () => {
   console.log("------------------------------------------------");
   console.log("SERVIDOR RODANDO NA PORTA 3000");
