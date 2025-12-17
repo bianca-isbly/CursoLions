@@ -26,7 +26,7 @@ app.post("/criarBaralho", (req, res) => {
 });
 
 // OPÇÃO 2: Listar Baralhos (GET)
-app.get("/listarBaralhos", (req, res) => {
+app.get("/listarBaralhos", (__req, res) => {
   return res
     .status(200)
     .json({ baralhos, status_200: "Lista de baralhos cadastrados!" });
@@ -50,6 +50,18 @@ app.put("/atualizarBaralho/:id", (req, res) => {
 });
 
 // OPÇÃO 4: Remoção do Baralho (DELETE)
+app.delete("/removerBaralho/:id", (req, res) =>
+  id = parseInt(req.params.id),
+
+  baralhos.forEach((baralhoEscolhido) => {
+    if (id == baralhoEscolhido.id) {
+      baralhoEscolhido.splice(id, 1);
+      return res
+        .status(200)
+        .json({ baralhos, status_200: "Baralho removido com sucesso!" });
+    }
+  });
+)
 
 //  node --watch index.js --> para rodar o terminal automaticamente.
 
